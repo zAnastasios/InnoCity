@@ -31,10 +31,8 @@ public class VoluAdapter extends RecyclerView.Adapter<VoluAdapter.ViewHolder> {
     @Override
     public VoluAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewtype) {
         Context context = viewGroup.getContext();
-        LayoutInflater inflater = LayoutInflater.from(
-                viewGroup.getContext());
-        View v =
-                inflater.inflate(R.layout.activity_voluntary_work, viewGroup, false);
+        LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
+        View v = inflater.inflate(R.layout.activity_voluntary_work, viewGroup, false);
         VoluAdapter.ViewHolder vh = new VoluAdapter.ViewHolder(v);
         return vh;
     }
@@ -43,7 +41,7 @@ public class VoluAdapter extends RecyclerView.Adapter<VoluAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull VoluAdapter.ViewHolder viewHolder, final int position) {
 
 
-       // viewHolder.volu_textView.setText(table.get(position).toString());
+
         VoluntaryWork vol_work = (VoluntaryWork) table.get(position);
         viewHolder.volu_textView.setText(vol_work.getShortDesc());
         viewHolder.volu_date.setText(vol_work.getDate());
@@ -74,7 +72,7 @@ public class VoluAdapter extends RecyclerView.Adapter<VoluAdapter.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
-           view=itemView;
+            view=itemView;
             volu_textView = (TextView) itemView.findViewById(R.id.volu_short_desc);
             volu_date=(TextView) itemView.findViewById(R.id.volu_date);
             volu_imageView = (ImageView) itemView.findViewById(R.id.volu_image);
@@ -86,9 +84,7 @@ public class VoluAdapter extends RecyclerView.Adapter<VoluAdapter.ViewHolder> {
                     Intent intent = new Intent(view.getContext(),Volu_News_More_Info.class);
                     intent.putExtra("Volu_work_clicked",table.get(getAdapterPosition()));
                     view.getContext().startActivity(intent);
-                     //   Voluntary_News.itemClicked(view,getAdapterPosition());
 
-                    // Intent intent = new Intent(VoluAdapter.this,Volu_News_More_Info.class);
 
                 }
             });

@@ -101,16 +101,7 @@ public class ListForm extends AppCompatActivity {
                                 startActivity(intent);
                                 break;
                         }
-//                        if(menuItem.getItemId() == R.id.nav_camera){
-//                             intent = new Intent(mContext, Map_reports.class);
-//                        }else if (menuItem.getItemId() == R.id.nav_gallery){
-//                             intent = new Intent(mContext, ListForm.class);
-//                        }else{
-//                            intent = new Intent(mContext, StartActivity.class);
-//                            finish();
-//                        }
-                        //ekkinisi activity analoga tin epilogi kai
-                        //klisimo toy drawer
+
 
                         mDrawerLayout.closeDrawers();
                         return true;
@@ -133,7 +124,7 @@ public class ListForm extends AppCompatActivity {
                 recyclerView.setHasFixedSize(true);
                 mAdapter = new ListAdapter(arrayList);
                 recyclerView.setAdapter(mAdapter);
-              //  arrayList.clear();
+
             }
 
             @Override

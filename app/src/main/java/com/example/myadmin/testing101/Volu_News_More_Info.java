@@ -22,7 +22,6 @@ public class Volu_News_More_Info extends AppCompatActivity {
     private TextView Date;
     private TextView BigDesc;
     private ImageView Pic_Url;
-   // private ConstraintLayout con_la;
     private CardView More_info_card_view;
     private DrawerLayout mDrawerLayout;
 
@@ -35,7 +34,6 @@ public class Volu_News_More_Info extends AppCompatActivity {
         Date=(TextView) findViewById(R.id.volu_date_more_info);
         Pic_Url=(ImageView) findViewById(R.id.volu_image_more_info);
         BigDesc=(TextView) findViewById(R.id.big_desc_more_info);
-     //   con_la=(ConstraintLayout) findViewById(R.id.more_info_con_layout);
         mDrawerLayout = findViewById(R.id.drawer_layout_more_info_news);
 
 
@@ -45,7 +43,7 @@ public class Volu_News_More_Info extends AppCompatActivity {
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
-        //diaxeirisi ton antikeimenon tou navbar
+        //parcing the data from the intent to the activity components
         Intent getInfo=getIntent();
         VoluntaryWork vol_work_clicked=(VoluntaryWork) getInfo.getParcelableExtra("Volu_work_clicked");
         ShortDesc.setText(vol_work_clicked.getShortDesc());
@@ -99,26 +97,12 @@ public class Volu_News_More_Info extends AppCompatActivity {
                                 startActivity(intent);
                                 break;
                         }
-//                        if(menuItem.getItemId() == R.id.nav_camera){
-//                             intent = new Intent(mContext, Map_reports.class);
-//                        }else if (menuItem.getItemId() == R.id.nav_gallery){
-//                             intent = new Intent(mContext, ListForm.class);
-//                        }else{
-//                            intent = new Intent(mContext, StartActivity.class);
-//                            finish();
-//                        }
-                        //ekkinisi activity analoga tin epilogi kai
-                        //klisimo toy drawer
+
 
                         mDrawerLayout.closeDrawers();
                         return true;
                     }
                 });
-
-
-
-
-
 
 
     }

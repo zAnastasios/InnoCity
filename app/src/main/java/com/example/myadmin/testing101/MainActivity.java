@@ -42,6 +42,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity  {
     private DatabaseReference mMessagesDatabaseReference;
     private FirebaseAuth firebaseAuth;
     MyViewModel model;
-   // private ViewModel vm;
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -137,14 +138,12 @@ public class MainActivity extends AppCompatActivity  {
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
+
                     }
                 });
             }
 
         });
-
-
-
 
     }
 

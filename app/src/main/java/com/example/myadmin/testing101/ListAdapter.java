@@ -34,14 +34,6 @@ import java.util.ArrayList;
             View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_item,viewGroup,false);
             return  new ViewHolder(itemView);
 
-          /*  Context context = viewGroup.getContext();
-            LayoutInflater inflater = LayoutInflater.from(
-                    viewGroup.getContext());
-            View v =
-                    inflater.inflate(R.layout.list_item, viewGroup, false);
-            ViewHolder vh = new ViewHolder(v);
-            return vh;
-            */
         }
 
         @Override

@@ -39,7 +39,6 @@ public class TestFormActivity extends AppCompatActivity {
         start = System.currentTimeMillis();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("t_forms");
-        Intent intentThatStartedThisActivity = getIntent();
         addListenerOnButton();
         addListenerOnSpinnerItemSelection();
     }

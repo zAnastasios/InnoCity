@@ -32,7 +32,7 @@ public class ProfileManager extends AppCompatActivity  {
     PopupWindow popUp;
     private RelativeLayout rel;
     private LinearLayout layout;
-  //  private boolean flag=false;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,41 +48,6 @@ public class ProfileManager extends AppCompatActivity  {
         positive=findViewById(R.id.positive_number);
         negative=findViewById(R.id.negative_number);
         rel=findViewById(R.id.main_relative_view);
-        //eligable=findViewById(R.id.eligible_for_reward);
-        int pos = Integer.parseInt(positive.getText().toString());
-        int neg = Integer.parseInt(negative.getText().toString());
-        if(((pos/neg)*100)>90)
-        {
-          /*  layout = new LinearLayout(this);
-            LayoutInflater inflater = (LayoutInflater)
-                    getSystemService(LAYOUT_INFLATER_SERVICE);
-            View popupView = inflater.inflate(R.layout.activity_personal_profile, null);
-
-            // create the popup window
-            int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-            int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-            boolean focusable = true; // lets taps outside the popup also dismiss it
-            final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
-
-            // show the popup window
-            // which view you pass in doesn't matter, it is only used for the window tolken
-            popupWindow.showAtLocation(layout, Gravity.CENTER, 200, 100);
-
-            // dismiss the popup window when touched
-            popupView.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    popupWindow.dismiss();
-                    return true;
-                }
-            });
-
-*/
-
-            //popUp.showAtLocation(rel, Gravity.CENTER, 10, 10);
-           // popUp.update(50, 50, 300, 80);
-            // eligable.setText("Συγχαρητήρια! Παρατηρήσαμε ότι η συνδρομή σας βοηθάει σημαντικά στην βελτίωση του δήμου μας. Μπορείτε να επικοινωνήσετε μαζί μας για να παραλάβετε την αμοιβή σας");
-        }
 
 
             Email.setText(getIntent().getExtras().getString("username"));
@@ -95,8 +60,6 @@ public class ProfileManager extends AppCompatActivity  {
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
         //diaxeirisi ton antikeimenon tou navbar
         NavigationView navigationView = findViewById(R.id.nav_view1);
-
-        
 
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
@@ -137,16 +100,7 @@ public class ProfileManager extends AppCompatActivity  {
                                 startActivity(intent);
                                 break;
                         }
-//                        if(menuItem.getItemId() == R.id.nav_camera){
-//                             intent = new Intent(mContext, Map_reports.class);
-//                        }else if (menuItem.getItemId() == R.id.nav_gallery){
-//                             intent = new Intent(mContext, ListForm.class);
-//                        }else{
-//                            intent = new Intent(mContext, StartActivity.class);
-//                            finish();
-//                        }
-                        //ekkinisi activity analoga tin epilogi kai
-                        //klisimo toy drawer
+
 
                         mDrawerLayout.closeDrawers();
                         return true;

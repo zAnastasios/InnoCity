@@ -129,16 +129,7 @@ public class QnA extends AppCompatActivity {
                                 startActivity(intent);
                                 break;
                         }
-//                        if(menuItem.getItemId() == R.id.nav_camera){
-//                             intent = new Intent(mContext, Map_reports.class);
-//                        }else if (menuItem.getItemId() == R.id.nav_gallery){
-//                             intent = new Intent(mContext, ListForm.class);
-//                        }else{
-//                            intent = new Intent(mContext, StartActivity.class);
-//                            finish();
-//                        }
-                        //ekkinisi activity analoga tin epilogi kai
-                        //klisimo toy drawer
+
 
                         mDrawerLayout.closeDrawers();
                         return true;
@@ -161,37 +152,32 @@ public class QnA extends AppCompatActivity {
       //  listDataHeader.add("Coming Soon..");
 
         // Adding child data
-        List<String> top250 = new ArrayList<String>();
-        top250.add("1. Πιστοποιητικό οικογενειακής κατάστασης");
-        top250.add("2. Πιστοποιητικό γέννησης");
-        top250.add("3. Πιστοποιητικό εντοπιότητας");
-        top250.add("4. Αίτηση μεταδημότευσης");
-        top250.add("5. Διαγραφή λόγω διαζυγίου");
-        top250.add("6. Αλλαγή εκλογικού διαμερίσματος για δημότες Χίου");
+        List<String> ListDhmotikhs = new ArrayList<String>();
+        ListDhmotikhs.add("1. Πιστοποιητικό οικογενειακής κατάστασης");
+        ListDhmotikhs.add("2. Πιστοποιητικό γέννησης");
+        ListDhmotikhs.add("3. Πιστοποιητικό εντοπιότητας");
+        ListDhmotikhs.add("4. Αίτηση μεταδημότευσης");
+        ListDhmotikhs.add("5. Διαγραφή λόγω διαζυγίου");
+        ListDhmotikhs.add("6. Αλλαγή εκλογικού διαμερίσματος για δημότες Χίου");
 
 
-        List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("1.  Ληξιαρχική πράξη γέννησης");
-        nowShowing.add("2.  Ληξιαρχική πρήξη θανάτου");
-        nowShowing.add("3.  Ληξιαρχική πράξη γάμου");
-        nowShowing.add("4.  Ληξιαρχική πράξη υιοθεσίας");
-        nowShowing.add("5.  Δήλωση πράξη ονοματοδοσίας");
-        nowShowing.add("6.  Δήλωση γέννησης");
-        nowShowing.add("7.  Δήλωση βάπτισης");
-        nowShowing.add("8.  Δήλωση γάμου");
-        nowShowing.add("9.  Δήλωση διαζυγίου");
-        nowShowing.add("10. Δήλωση θανάτου");
+        List<String> listLixiarxeiou = new ArrayList<String>();
+        listLixiarxeiou.add("1.  Ληξιαρχική πράξη γέννησης");
+        listLixiarxeiou.add("2.  Ληξιαρχική πρήξη θανάτου");
+        listLixiarxeiou.add("3.  Ληξιαρχική πράξη γάμου");
+        listLixiarxeiou.add("4.  Ληξιαρχική πράξη υιοθεσίας");
+        listLixiarxeiou.add("5.  Δήλωση πράξη ονοματοδοσίας");
+        listLixiarxeiou.add("6.  Δήλωση γέννησης");
+        listLixiarxeiou.add("7.  Δήλωση βάπτισης");
+        listLixiarxeiou.add("8.  Δήλωση γάμου");
+        listLixiarxeiou.add("9.  Δήλωση διαζυγίου");
+        listLixiarxeiou.add("10. Δήλωση θανάτου");
 
-     //   List<String> comingSoon = new ArrayList<String>();
-     //   comingSoon.add("2 Guns");
-     //   comingSoon.add("The Smurfs 2");
-     //   comingSoon.add("The Spectacular Now");
-     //   comingSoon.add("The Canyons");
-     //   comingSoon.add("Europa Report");
 
-        listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), nowShowing);
-     //   listDataChild.put(listDataHeader.get(2), comingSoon);
+
+        listDataChild.put(listDataHeader.get(0), ListDhmotikhs);
+        listDataChild.put(listDataHeader.get(1), listLixiarxeiou);
+
     }
 
 

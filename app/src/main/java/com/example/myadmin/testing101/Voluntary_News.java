@@ -29,9 +29,7 @@ public class Voluntary_News extends AppCompatActivity implements ClickListener {
     private RecyclerView.Adapter mAdapter;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mMessagesDatabaseReference;
-  //  private ChildEventListener childEventListener;
     private ArrayList<VoluntaryWork> arrayList = new ArrayList<VoluntaryWork>();
-   // private static final int NUM_LIST_ITEMS = 100;
     private DrawerLayout mDrawerLayout;
 
     public Voluntary_News(){}
@@ -59,12 +57,11 @@ public class Voluntary_News extends AppCompatActivity implements ClickListener {
         {
             toolbar.setTitle("Εθελοντικές δράσεις");
         }
-       // toolbar.setTitle("den xerw ti mou shmvenei"); //TITLOS TOOLBAR
+        //Setting toolbar and NavView
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
-        //diaxeirisi ton antikeimenon tou navbar
         NavigationView navigationView = findViewById(R.id.nav_view1);
 
 
@@ -108,16 +105,6 @@ public class Voluntary_News extends AppCompatActivity implements ClickListener {
                                 startActivity(intent);
                                 break;
                         }
-//                        if(menuItem.getItemId() == R.id.nav_camera){
-//                             intent = new Intent(mContext, Map_reports.class);
-//                        }else if (menuItem.getItemId() == R.id.nav_gallery){
-//                             intent = new Intent(mContext, ListForm.class);
-//                        }else{
-//                            intent = new Intent(mContext, StartActivity.class);
-//                            finish();
-//                        }
-                        //ekkinisi activity analoga tin epilogi kai
-                        //klisimo toy drawer
 
                         mDrawerLayout.closeDrawers();
                         return true;
@@ -132,7 +119,7 @@ public class Voluntary_News extends AppCompatActivity implements ClickListener {
                 {
 
                     VoluntaryWork volwork = data.getValue(VoluntaryWork.class);
-                   // String s1="eee";
+
                     if(volwork.getDescription().equals(getIntent().getExtras().getString("category"))) {
                         arrayList.add(volwork);
                     }
@@ -140,7 +127,7 @@ public class Voluntary_News extends AppCompatActivity implements ClickListener {
                 recyclerView.setHasFixedSize(true);
                 mAdapter = new VoluAdapter(arrayList);
                 recyclerView.setAdapter(mAdapter);
-              //  arrayList.clear();
+
             }
 
             @Override
@@ -160,7 +147,6 @@ public class Voluntary_News extends AppCompatActivity implements ClickListener {
         startActivity(intent);
 
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
