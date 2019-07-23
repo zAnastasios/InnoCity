@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_profile"
+
+            android:title="Το προφίλ μου"
+            />
+
+        <item
+                android:id="@+id/nav_camera"
+
+                android:title="@string/import1" />
+        <item
+                android:id="@+id/nav_gallery"
+
+                android:title="@string/gallery" />
+        <item
+            android:id="@+id/nav_QnA"
+
+            android:title="Συχνές Ερωτήσεις" />
+
+        <item
+            android:id="@+id/nav_News"
+            android:title="Ανακοινώσεις από τον δήμο"
+            />
+
+        <item
+            android:id="@+id/nav_Volu"
+            android:title="Εθελοντικές δράσεις"
+            />
+
+
+
+        <item
+                android:id="@+id/nav_slideshow"
+
+                android:title="@string/slideshow" />
+    </group>
+</menu>

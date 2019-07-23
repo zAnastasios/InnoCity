@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/innocitylogo"
+        app:civ_border_color=" #0000FF"
+        app:civ_border_width="2dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="InnoCity"
+            android:textSize="34dp"
+            android:layout_gravity="center"/>
+
+    <EditText
+            android:layout_marginTop="30dp"
+            android:id="@+id/emaillgn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:hint="@string/emaillgn"
+            android:inputType="textEmailAddress" />
+
+    <EditText
+            android:layout_marginTop="30dp"
+            android:id="@+id/pwdlgn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:hint="Κωδικός"
+            android:inputType="textPassword" />
+
+    <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:text="@string/login"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="#F8F8FF"
+        />
+
+
+    <TextView
+        android:id="@+id/reg_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:text="Για δημιουργία λογαριασμού πατήστε εδώ"
+        android:textColor="#ff0000ff"
+        android:textSize="15sp" />
+
+
+
+</LinearLayout>

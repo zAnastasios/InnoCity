@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_PP"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_relative_view">
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar1" />
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/volu_card_view"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="12dp"
+        card_view:cardElevation="3dp"
+        card_view:contentPadding="4dp"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
+        android:layout_below="@+id/toolbar1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="360dp"
+            android:layout_height="180dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/defaultuser"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="3dp"
+            android:background="@color/colorAccent"
+            android:layout_alignParentLeft="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_gravity="center_vertical"
+        >
+
+
+
+        <TextView
+
+            android:id="@+id/username_text"
+            android:text="Όνομα χρήστη:     "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+
+            />
+
+        <TextView
+            android:id="@+id/username_textview_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@+id/username_text"
+            android:text=""
+            android:layout_marginTop="20dp"
+
+            android:textSize="18dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_text"
+            android:layout_below="@+id/username_text"
+            android:text="Email:    "
+            android:textSize="18dp"
+            android:layout_marginLeft="4dp"
+
+            android:layout_marginTop="20dp"
+
+            />
+        <TextView
+            android:id="@+id/email_real"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_textview_holder"
+            android:layout_toRightOf="@+id/email_text"
+            android:text=""
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/text_positive"
+            android:layout_below="@id/email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Αριθμός θετικών κρητικών:"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+
+            />
+
+        <TextView
+            android:id="@+id/positive_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email_text"
+            android:text="147"
+            android:layout_toRightOf="@id/text_positive"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp" />
+
+
+        <TextView
+            android:id="@+id/text_negative"
+            android:layout_below="@id/text_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Αριθμός αρνητικών κρητικών:"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+
+            />
+
+        <TextView
+            android:id="@+id/negative_number"
+            android:layout_below="@id/text_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_toRightOf="@id/text_negative"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp" />
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_view"
+        />
+
+
+</android.support.v4.widget.DrawerLayout>

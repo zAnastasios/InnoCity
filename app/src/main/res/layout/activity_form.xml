@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        xmlns:tools="http://schemas.android.com/tools"
+                                        android:id="@+id/drawer_layout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:fitsSystemWindows="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".FormActivity">
+
+        <include
+            android:id="@+id/toolbar1"
+            layout="@layout/toolbar"/>
+
+
+        <TextView
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="143dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="135dp"
+                android:text="FORM"
+                android:textSize="30dp" />
+
+        <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="59dp"
+                android:layout_marginBottom="428dp"
+                android:entries="@array/type_arrays"
+                android:prompt="@string/type_prompt" />
+
+        <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="146dp"
+                android:inputType="text"
+                android:hint="Περιγραφή του προβλήματος" />
+        <TextView
+            android:id="@+id/description_for_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:text="Τραβήξτε μια φωτογραφία του προβλήματος"
+            android:layout_centerHorizontal="true"
+            android:textSize="14dp"
+            android:layout_marginTop="12dp"
+
+
+            />
+
+
+        <Button
+                android:id="@+id/send_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="396dp"
+                android:hint="@string/send_btn" />
+
+        <ImageButton
+                android:id="@+id/picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/camera_icon_52"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="246dp"
+                android:layout_marginEnd="118dp"
+                android:layout_marginBottom="214dp"
+                 />
+
+
+    </RelativeLayout>
+    <!-- Layout to contain contents of main body of screen (drawer will slide over this) -->
+
+
+
+    <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/drawer_view"
+    />
+
+</android.support.v4.widget.DrawerLayout>

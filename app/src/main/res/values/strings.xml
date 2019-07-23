@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Testing</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="pwd">Password</string>
+    <string name="register">Register</string>
+
+    <string name="emaillgn">Email</string>
+    <string name="pwdlgn">Password</string>
+    <string name="login">Login</string>
+    <string name="MainRegister">Register</string>
+
+    <string name="import1">Προβολή σε χάρτη</string>
+    <string name="gallery">Προβολή σε λίστα</string>
+    <string name="slideshow">Αποσύνδεση</string>
+
+
+    <string name="type_prompt">Choose Type</string>
+
+    <string-array name="type_arrays">
+        <item>Θέματα φωταγώγησης</item>
+        <item>Οδικά θέματα</item>
+        <item>Περιβαλλοντικά θέματα και καθαριότητα</item>
+        <item>Θέματα σηματοδότησης</item>
+        <item>Θέματα ύδρευσης/αποχέτευσης</item>
+    </string-array>
+    <string-array name="type_arrays2">
+        <item>Οδικά θέματα και φωτισμός</item>
+        <item>Περιβαλλοντικά θέματα και καθαριότητα
+        </item>
+        <item>Εργασίες</item>
+        <item>Συντηρήσεις</item>
+    </string-array>
+    <string name="send_btn">Send</string>
+    <string name="description">Description</string>
+    <string name="picture">Take Picture</string>
+    <string name="title_activity_map_reports">Map</string>
+    <string name="tools" />
+
+
+</resources>
