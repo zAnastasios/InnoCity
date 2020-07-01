@@ -10,13 +10,13 @@
             android:name="android.hardware.camera"
             android:required="true" />
 
-    <application android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+    <application android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:allowBackup="true"
         android:icon="@drawable/innocitylogo"
         android:label="InnoCity"
         android:roundIcon="@drawable/innocitylogo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        >
         <service android:name=".GPSTracker" />
 
         <activity android:name=".MainActivity">

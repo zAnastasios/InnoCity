@@ -1,9 +1,8 @@
 package com.example.myadmin.testing101;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.ViewModel;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.annotation.NonNull;
 
 public class MyViewModel extends AndroidViewModel {
     private String username;
