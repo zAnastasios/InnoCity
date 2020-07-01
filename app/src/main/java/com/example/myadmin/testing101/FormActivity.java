@@ -1,7 +1,7 @@
 package com.example.myadmin.testing101;
 
 import android.Manifest;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -9,15 +9,15 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.NonNull;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -52,7 +52,7 @@ public class FormActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     Context mContext;
 
-    //antikeimeno ths prostheths klashs GPSTracker
+
     GPSTracker gps ;
 
     TextView text;
@@ -74,7 +74,7 @@ public class FormActivity extends AppCompatActivity {
     public FormActivity() {
 
     }
-    //synartisi pou trexei kata thn dimiourgia tou activity
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +86,7 @@ public class FormActivity extends AppCompatActivity {
         email_to_profile=getIntent().getExtras().getString("email");
 
 
-        //layouts kai toolbar
+
         mDrawerLayout = findViewById(R.id.drawer_layout);
         Toolbar toolbar = findViewById(R.id.toolbar1);
 
@@ -98,8 +98,7 @@ public class FormActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
-       actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
-        //diaxeirisi ton antikeimenon tou navbar
+        actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
 
@@ -168,8 +167,7 @@ public class FormActivity extends AppCompatActivity {
                 longitude = gps.getLongitude();
                 Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
             } else {
-                //Erotisi sto xristi na anoiksi tin topothesia
-                //gt den mporese na ton entopisi meso diktyo i gps
+
                 gps.showSettingsAlert();
             }
         }
@@ -184,7 +182,7 @@ public class FormActivity extends AppCompatActivity {
         user_email = extras.getString("email");
         firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference().child("photos/"+user_email+"_"+latitude+"_"+longitude);
-        //listener gia to koumpi tis fotografias
+
         picture.setOnClickListener(new View.OnClickListener() {
             @Override
 
@@ -198,19 +196,19 @@ public class FormActivity extends AppCompatActivity {
 
         });
 
-        //paralaveis syntetagmenes
+
         addListenerOnButton();
         addListenerOnSpinnerItemSelection();
 
     }
 
-    //epilogi anitkeimenou apo spinner
+
     public void addListenerOnSpinnerItemSelection() {
         spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(new SpinnerItemSelected());
     }
 
-    //sunartisi gia listener koumpiou apostolis anaforas
+
     public void addListenerOnButton() {
 
         spinner = (Spinner) findViewById(R.id.spinner);
@@ -302,30 +300,26 @@ public class FormActivity extends AppCompatActivity {
 
         switch (requestCode) {
             case 1: {
-                // If request is cancelled, the result arrays are empty.
+
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // permission was granted, yay! Do the
-                    // contacts-related task you need to do.
+
                     gps = new GPSTracker(mContext, FormActivity.this);
-                    // Check if GPS enabled
+
                     if (gps.canGetLocation()) {
 
                         latitude = gps.getLatitude();
                         longitude = gps.getLongitude();
-                        // \n is for new line
+
                         Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
                     } else {
-                        // Can't get location.
-                        // GPS or network is not enabled.
-                        // Ask user to enable GPS/network in settings.
+
                         gps.showSettingsAlert();
                     }
 
                 }
                 else {
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
+
                     Toast.makeText(mContext, "Location permission needed", Toast.LENGTH_SHORT).show();
                 }
                 return;
